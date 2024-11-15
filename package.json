@@ -1,0 +1,30 @@
+{
+  "name": "solid-adwaita",
+  "version": "1.0.0",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neutrino2211/solid-adwaita.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "solid-js": "^1.9.3"
+  },
+  "bugs": {
+    "url": "https://github.com/neutrino2211/solid-adwaita/issues"
+  },
+  "description": "An experiment on controlling libadwaita UIs using Solid.JS",
+  "homepage": "https://github.com/neutrino2211/solid-adwaita#readme",
+  "keywords": [],
+  "license": "ISC",
+  "scripts": {
+    "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --format=esm",
+    "dev": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --format=esm --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.13",
+    "@types/react": "^18.3.12",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  }
+}
