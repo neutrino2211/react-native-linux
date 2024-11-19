@@ -7,8 +7,8 @@
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "jsx": "preserve",
-      "jsxImportSource": "solid-js",
-      "types": ["solid-js"]
+      "jsxImportSource": "react",
+      "types": ["react"]
     },
     "include": ["src/**/*"]
   }

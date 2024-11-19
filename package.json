@@ -8,6 +8,9 @@
   },
   "main": "index.js",
   "dependencies": {
+    "@types/react-reconciler": "^0.28.8",
+    "react": "^18.3.1",
+    "react-reconciler": "^0.29.2",
     "solid-js": "^1.9.3"
   },
   "bugs": {
@@ -18,12 +21,13 @@
   "keywords": [],
   "license": "ISC",
   "scripts": {
-    "build": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --format=esm",
-    "dev": "esbuild src/index.tsx --bundle --outfile=dist/bundle.js --format=esm --watch"
+    "build": "esbuild src/index.tsx --bundle --outfile=native/build/bundle.js --format=esm",
+    "dev": "esbuild src/index.tsx --bundle --outfile=native/build/bundle.js --format=esm --watch"
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",
     "@types/react": "^18.3.12",
+    "babel-preset-react": "^6.24.1",
     "esbuild": "^0.24.0",
     "typescript": "^5.6.3"
   }

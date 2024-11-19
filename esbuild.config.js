@@ -6,11 +6,11 @@ esbuild.build({
   outfile: 'dist/bundle.js',
   format: 'esm',
   plugins: [{
-    name: 'solid',
+    name: 'react',
     setup(build) {
       build.onLoad({ filter: /\.[jt]sx$/ }, async (args) => {
         const { transformAsync } = require('@babel/core');
-        const solidPreset = require('babel-preset-solid');
+        const solidPreset = require('babel-preset-react');
         
         const source = await require('fs').promises.readFile(args.path, 'utf8');
         const transformed = await transformAsync(source, {
