@@ -3,9 +3,9 @@ import React, { Component } from './lib';
 class View extends Component<any> {
   render() {
     return (
-      <native-view>
+      <gtk-box>
         {this.props.children}
-      </native-view>
+      </gtk-box>
     );
   }
 }

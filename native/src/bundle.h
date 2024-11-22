@@ -33,6 +33,7 @@ namespace bundle {
       }
       function setImmediate(callback) {
         print("SI: " + callback);
+        callback()
         // return _setImmediate(callback)
       }
     )";

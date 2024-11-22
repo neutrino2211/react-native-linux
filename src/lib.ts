@@ -4,10 +4,10 @@ import ReactReconciler from 'react-reconciler';
 // Extend JSX namespace to include custom elements
 declare module 'react' {
   namespace JSX {
-      // Define your custom elements here
-      interface IntrinsicElements {
-          'native-view': any;
-      }
+    // Define your custom elements here
+    interface IntrinsicElements {
+      'gtk-box': any;
+    }
   }
 }
 
@@ -96,10 +96,12 @@ const hostConfig = {
     return LinuxNativeModule.createText(text);
   },
   appendInitialChild: (parent, child) => {
-    parent.addChildView(child);
+    console.log(JSON.stringify({parent, child}));
+    LinuxNativeModule.appendChild(CNode.fromPtr(parent), CNode.fromPtr(child));
   },
   appendChild(parent, child) {
-    parent.addChildView(child);
+    console.log(parent);
+    LinuxNativeModule.appendChild(CNode.fromPtr(parent), CNode.fromPtr(child));
   },
   finalizeInitialChildren: (yueElement, type, props) => {},
   supportsMutation: true,
