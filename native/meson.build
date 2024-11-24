@@ -12,7 +12,7 @@ src_dir = 'src'
 
 # Create executable
 executable('solid_native',
-  [src_dir / 'main.cpp', src_dir / 'namespace.cpp'],
+  [src_dir / 'main.cpp'],
   cpp_args: '-DBUNDLE_PATH=bundle.js',
   dependencies: deps,
   install: true
@@ -20,5 +20,5 @@ executable('solid_native',
 
 # Optionally, create a custom test
 test('solid_native_test', executable('solid_native_test',
-  [src_dir / 'main.cpp', src_dir / 'namespace.cpp'], 
+  [src_dir / 'main.cpp'], 
   dependencies: deps))

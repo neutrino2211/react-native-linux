@@ -15,8 +15,8 @@ namespace timeout {
 
   static void TimerExecuteCallback(task_t task) {
     std::printf("TIMER %x\n", task.fn);
-    // if (task.should_run)
-    //   jsc_value_function_call(task.fn, G_TYPE_NONE);
+    if (task.should_run)
+      jsc_value_function_call(task.fn, G_TYPE_NONE);
 
     std::printf("TIMER\n");
 

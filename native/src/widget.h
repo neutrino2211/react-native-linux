@@ -1,5 +1,5 @@
-#ifndef RNL_WIDGET
-#define RNL_WIDGET
+#ifndef RNL_WIDGET_H
+#define RNL_WIDGET_H
 
 
 

@@ -1,5 +1,5 @@
-#ifndef RNL_BUNDLE
-#define RNL_BUNDLE
+#ifndef RNL_BUNDLE_H
+#define RNL_BUNDLE_H
 #include <stdio.h>
 #include <string>
 #include <vector>
