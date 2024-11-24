@@ -1,2 +1,2 @@
-# solid-adwaita
-An experiment on controlling libadwaita UIs using Solid.JS
+# React Native on Linux
+An experiment on controlling libadwaita UIs using React & React Reconciler
