@@ -43,6 +43,8 @@ public:
             widget_name = "button";
         }
 
+        std::printf("about to register node of type \"%s\"\n", type);
+
         return self->registerWidget(widget, widget_name);
     }
 
@@ -153,11 +155,18 @@ public:
         std::hash<GtkWidget*> hasher;
         size_t id = hasher(w);
 
-        widget_handle_t* handle = new widget_handle_t();
-        handle->name = name;
-        handle->widget = w;
+        try {    
+            widget_handle_t* handle = new widget_handle_t();
+            handle->name = name;
+            handle->widget = w;
 
-        this->widgets.insert({id, handle});
+            this->widgets.insert({id, handle});
+        } catch (std::exception& ex) {
+            std::printf("Exception: %s\n", ex.what());
+            throw ex;
+        }
+
+        std::printf("ID: %d, node: %s\n", id, name);
 
         return id;
     }
