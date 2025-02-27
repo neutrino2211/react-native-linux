@@ -27,9 +27,9 @@ namespace bundle {
         print("ST: " + callback);
         return _setTimeout(callback, ms)
       }
-      function clearTimeout(indentifier) {
+      function clearTimeout(identifier) {
         print("CT: " + identifier);
-        _clearTimeout(indentifier)
+        _clearTimeout(identifier)
       }
       function setImmediate(callback) {
         print("SI: " + callback);
