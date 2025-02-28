@@ -1,5 +1,5 @@
-#ifndef JS_NATIVE_INTERFACE_H
-#define JS_NATIVE_INTERFACE_H
+#ifndef RNL_JS_NATIVE_INTERFACE_H
+#define RNL_JS_NATIVE_INTERFACE_H
 
 #include <jsc/jsc.h>
 #include <string>
@@ -23,12 +23,8 @@ public:
   JSNativeInterface(JSCContext*, std::string);
   ~JSNativeInterface();
 
-  virtual void init() {
-    std::printf("init\n");
-  };
-  virtual void deinit() {
-    std::printf("deinit\n");
-  };
+  virtual void init() {};
+  virtual void deinit() {};
 };
 
 JSNativeInterface::JSNativeInterface(JSCContext* ctx, std::string name) {

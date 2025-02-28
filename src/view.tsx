@@ -1,4 +1,4 @@
-import React, { Component } from './lib';
+import React, { Component } from './index.ts';
 
 class View extends Component<{children: any; orientation?: 'horizontal' | 'vertical'}> {
   render() {

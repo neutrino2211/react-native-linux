@@ -1,4 +1,4 @@
-import React from './lib';
+import React from './index.ts';
 
 export default function Button({children}: {children: string}) {
   return (

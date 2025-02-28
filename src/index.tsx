@@ -1,5 +1,5 @@
 import Button from "./button";
-import React, {render} from "./lib";
+import React, {render} from "./index.ts";
 import View from "./view";
 
 function App() {

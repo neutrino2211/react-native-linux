@@ -21,11 +21,11 @@
   "keywords": [],
   "license": "ISC",
   "scripts": {
-    "build-web": "esbuild src/index.tsx --bundle --outfile=native/build/bundle.js --format=esm",
-    "build-native": "cd native && meson build --reconfigure && ninja -C build",
+    "build-web": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --format=esm",
+    "build-native": "meson setup build --reconfigure && ninja -C build",
     "build": "npm run build-web && npm run build-native",
-    "dev": "esbuild src/index.tsx --bundle --outfile=native/build/bundle.js --format=esm --watch",
-    "start": "npm run build && native/build/solid_native"
+    "dev": "esbuild src/index.tsx --bundle --outfile=build/bundle.js --format=esm --watch",
+    "start": "npm run build && build/rnl"
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",

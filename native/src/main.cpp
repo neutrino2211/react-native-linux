@@ -3,9 +3,9 @@
 #include <iostream>
 #include <string.h>
 #include <adwaita.h>
-#include "JSNativeInterface.h"
-#include "bundle.h"
-#include "timeout.h"
+#include <rnl/timeout.h>
+#include <rnl/bundle.h>
+#include <rnl/jsinterface.h>
 #include <gtk-4.0/gtk/gtkbox.h>
 #include <gtk-4.0/gtk/gtkwindow.h>
 #include <gtk-4.0/gtk/gtkwidget.h>
